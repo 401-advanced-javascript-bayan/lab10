@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-vars */
 'use strict';
-
-/**
- * not found error 
- */
-module.exports = (req,res) => {
-  res.status(404);
-  res.statusMessage = 'Resource Not Found';
-  res.json({error:'Not Found'});
+//Notfound
+module.exports = (req,res,next) => {
+  let error = { error: 'Resource Not Found' };
+  res.statusCode = 404;
+  res.statusMessage = 'Not Found';
+  res.setHeader('Content-Type', 'application/json');
+  res.write(JSON.stringify(error));
+  res.end();
+};

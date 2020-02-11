@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 'use strict';
-
-/**
- * server error 
- */
-module.exports = (error, req, res, next) => {
-  res.status(500);
+//Error
+module.exports = (err, req, res, next) => {
+  let error = { error: err };
+  res.statusCode = 500;
   res.statusMessage = 'Server Error';
-  res.json({error:error});
+  res.setHeader('Content-Type', 'application/json');
+  res.write( JSON.stringify(error) );
+  res.end();
 };
