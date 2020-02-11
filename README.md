@@ -9,7 +9,7 @@ Setup
 i.e.
 
 PORT - 3000
-MONGODB_URI - MONGODB_URI=mongodb://localhost:27017/lab-10-db
+MONGODB_URI - MONGODB_URI=mongodb://localhost:27017/lab9
 How to initialize/run your application (where applicable)
 e.g. npm start
 Tests
