@@ -53,7 +53,7 @@ router.delete('/api/v1/:model/:id', delete1);
 function get1(req, res, next) {
   req.model.get()
     .then(results => {
-      console.log('******** results: *********', results);
+    
       let count = results.length;
       res.status(200).json({ count, results });
     });
